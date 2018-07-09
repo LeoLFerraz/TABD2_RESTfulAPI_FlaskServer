@@ -1,0 +1,126 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 100vh;
+	background-color: lightblue;
+}
+
+header, footer, main {
+	padding: 10px;
+    width: 100%;
+}
+
+header, footer {
+	background-color: grey;
+	text-align: center;
+}
+
+header {
+    height: 6%;
+}
+
+footer {
+    height: 8%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:space-around;
+    height: 86%;
+    color: darkblue;
+}
+
+h1 {
+	display:inline;
+}
+
+button.flat {
+    font-size: 1.3rem;
+    min-width: 150px;
+    padding: 20px;
+    border: 0;
+    border-radius: 10px;
+    outline: 0; 
+    text-align: center;
+    cursor: pointer;
+}
+
+button.good {
+    background-color: green;
+    color: white;
+}
+
+button.flat span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 1s;
+}
+
+button.flat span::after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -25px;
+  transition: 1s;
+}
+
+button.flat:hover span {
+  padding-right: 19px;
+}
+
+button.flat:hover span::after {
+  opacity: 1;
+  right: 0;
+}
+
+form {
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    font-size: 1.2rem;
+    display:block;
+    margin: 0 0 5px 0;
+    padding: 18px 10px;
+    width: 60%;
+    height: 30px;
+    border: 0;
+    border-radius: 10px;
+    background-color: rgba(30, 30, 180, 0.2);
+    color: aliceblue;
+    outline: none;
+}
+
+input::placeholder {
+    color: rgba(0,0,0,0.5);
+}
+
+#regConfPwError {
+    display: none;
+    border: 2px solid red;
+    color: darkred;
+    margin: 0 0 5px 0;
+    padding: 5px;
+}
+
+#regSuccess {
+    display: none;
+    border: 2px solid green;
+    color: darkgreen;
+    margin: 0 0 5px 0;
+    padding: 5px;
+}
